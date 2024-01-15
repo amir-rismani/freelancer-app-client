@@ -19,7 +19,7 @@
 
 @layer components{
     .text-field{
-        @apply w-full text-left px-5 py-2 border-2 border-stroke outline-none rounded-md focus:border-primary;
+        @apply w-full px-5 py-2 border-2 border-stroke outline-none rounded-md focus:border-primary;
     }
 
     .btn{
