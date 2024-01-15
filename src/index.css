@@ -6,31 +6,31 @@
 @layer base{
     :root{
         --background-app-rgb: 255, 255, 255;
-        --color-primary-900: 74, 109, 255;
-        --color-primary-800: 92, 124, 255;
-        --color-primary-700: 110, 138, 255;
-        --color-primary-600: 128, 153, 255;
-        --color-primary-500: 146, 167, 255;
-        --color-primary-400: 164, 182, 255;
-        --color-primary-300: 183, 197, 255;
-        --color-primary-200: 201, 211, 255;
-        --color-primary-100: 219, 226, 255;
-        --color-primary-50: 228, 233, 255;
-        --color-secondary-900: 17, 24, 39;
-        --color-secondary-800: 31, 41, 55;
-        --color-secondary-700: 55, 65, 81;
-        --color-secondary-600: 75, 85, 99;
-        --color-secondary-500: 107, 114, 128;
-        --color-secondary-400: 156, 163, 175;
-        --color-secondary-300: 209, 213, 219;
-        --color-secondary-200: 229, 231, 235;
-        --color-secondary-100: 243, 244, 246;
-        --color-secondary-50: 249, 250, 251;
-        --color-secondary-0: 255, 255, 255;
-        --color-success: 0, 192, 115;
-        --color-warning: 255, 153, 0;
-        --color-error: 255, 71, 87;
-        --color-red-500: 239, 68, 68;
-        --color-red-300: 252, 165, 165;
+        --color-primary: 60, 80, 224;
+        --color-secondary: 128, 202, 238;
+        --color-dark: 100, 116, 139;
+        --color-green: 16, 185, 129;
+        --color-yellow: 240, 149, 12;
+        --color-red: 251,84,84;
+        --color-gray: 239, 244, 251;
+        --color-stroke: 226, 232, 240;
+    }
+}
+
+@layer components{
+    .text-field{
+        @apply w-full text-left px-5 py-2 border-2 border-stroke outline-none rounded-md focus:border-primary;
+    }
+
+    .btn{
+        @apply w-full rounded-md px-5 py-2 transition-all delay-100 ease-in-out
+    }
+
+    .btn--primary {
+        @apply bg-primary hover:bg-opacity-80 text-white
+    }
+
+    .btn--secondary {
+        @apply bg-gray hover:bg-opacity-90 text-dark border-2 border-stroke
     }
 }
