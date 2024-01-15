@@ -34,3 +34,26 @@
         @apply bg-gray hover:bg-opacity-90 text-dark border-2 border-stroke
     }
 }
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Vazir";
+    min-height: 100vh;
+    user-select: none;
+    background-color: rgb(var(--background-app-rgb));
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* border: none; */
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+#root{
+    height: 100vh;
+}
