@@ -1,11 +1,9 @@
-import CheckOTPForm from "../features/authentication/CheckOTPForm"
-import SendOTPForm from "../features/authentication/SendOTPForm"
+import AuthContainer from "../features/authentication/AuthContainer"
 
 function Auth() {
     return (
         <div className="flex flex-col items-center h-full py-20">
-            {/* <SendOTPForm /> */}
-            <CheckOTPForm />
+            <AuthContainer />
         </div>
     )
 }
