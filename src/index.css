@@ -9,10 +9,13 @@
         --color-primary: 60, 80, 224;
         --color-secondary: 128, 202, 238;
         --color-dark: 100, 116, 139;
+        --color-dark-middle:51, 58, 72;
+        --color-dark-full: 28, 36, 52;
         --color-green: 16, 185, 129;
         --color-yellow: 240, 149, 12;
         --color-red: 251,84,84;
         --color-gray: 239, 244, 251;
+        --color-gray-light:241, 245, 249;
         --color-stroke: 226, 232, 240;
     }
 }

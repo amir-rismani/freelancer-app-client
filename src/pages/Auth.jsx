@@ -2,7 +2,7 @@ import AuthContainer from "../features/authentication/AuthContainer"
 
 function Auth() {
     return (
-        <div className="flex flex-col items-center h-full py-20">
+        <div className="flex flex-col items-center h-full">
             <AuthContainer />
         </div>
     )

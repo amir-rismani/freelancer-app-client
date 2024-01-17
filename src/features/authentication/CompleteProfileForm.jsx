@@ -34,6 +34,7 @@ function CompleteProfileForm() {
                     name="email"
                     title="پست الکترونیک"
                     value={email}
+                    className="text-left"
                     onChange={(ev) => setEmail(ev.target.value)}
                 />
                 <div className="flex gap-x-5">

@@ -3,19 +3,31 @@ import App from './App';
 import Auth from './pages/Auth';
 import CompleteProfile from './pages/CompleteProfile';
 import NotFound from './pages/NotFound';
+import AuthLayout from './layouts/AuthLayout';
+import AppLayout from './layouts/AppLayout';
 
 export const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App />,
+        element: <AppLayout />,
+        children: [
+            {
+                path: "/",
+                element: <App />,
+            },
+        ]
     },
     {
-        path: "/auth",
-        element: <Auth />,
-    },
-    {
-        path: "/complete-profile",
-        element: <CompleteProfile />,
+        element: <AuthLayout />,
+        children: [
+            {
+                path: "/auth",
+                element: <Auth />,
+            },
+            {
+                path: "/complete-profile",
+                element: <CompleteProfile />,
+            },
+        ]
     },
     {
         path: "*",
