@@ -23,7 +23,7 @@
     }
 
     .btn{
-        @apply w-full rounded-md px-5 py-2 transition-all delay-100 ease-in-out
+        @apply rounded-md px-5 py-2 transition-all delay-100 ease-in-out
     }
 
     .btn--primary {
@@ -32,6 +32,14 @@
 
     .btn--secondary {
         @apply bg-gray hover:bg-opacity-90 text-dark border-2 border-stroke
+    }
+
+    .radio-input{
+        @apply flex justify-center items-center gap-x-2
+    }
+
+    .radio-button{
+        @apply cursor-pointer form-radio text-primary focus:ring-primary
     }
 }
 

@@ -31,12 +31,13 @@ function CheckOTPForm({ phoneNumber, setStep, isPendingOtp, onSubmitOtp }) {
         try {
             const { message, user } = await mutateAsync({ phoneNumber, otp });
             toast.success(message)
-            if (user.isActive) {
-                if (user.role === 'OWNER') navigate('/owner');
-                if (user.role === 'FREELANCER') navigate('/freelancer');
-            } else {
-                navigate('/complete-profile')
+            if (!user.isActive) return navigate('/complete-profile')
+            if (user.status !== 2) {
+                toast("پروفایل شما در انتظار تایید است.", { icon: "👏" })
+                return navigate('/');
             }
+            if (user.role === 'OWNER') return navigate('/owner');
+            if (user.role === 'FREELANCER') return navigate('/freelancer');
         } catch (error) {
             toast.error(error?.response?.data?.message)
         }
@@ -58,7 +59,7 @@ function CheckOTPForm({ phoneNumber, setStep, isPendingOtp, onSubmitOtp }) {
                     inputStyle="flex-1 px-5 py-2 border-2 border-stroke outline-none rounded-md focus:border-primary"
                 />
                 <div className="flex justify-center text-dark">{time > 0 ? `${time} ثانیه تا ارسال مجدد کد` : isPendingOtp ? <Loader width="20" height="24" /> : <button type="button" className="text-primary" onClick={onSubmitOtp}>ارسال مجدد کد</button>}</div>
-                {isPending ? <Loader /> : <button type="submit" className="btn btn--primary">اعتبار سنجی</button>}
+                {isPending ? <Loader /> : <button type="submit" className="btn btn--primary w-full">اعتبار سنجی</button>}
             </form>
         </div>
     )

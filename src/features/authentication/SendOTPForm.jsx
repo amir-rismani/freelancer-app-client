@@ -12,7 +12,7 @@ function SendOTPForm({ phoneNumber, setPhoneNumber, onSubmitOtp, isPendingOtp })
                     placeholder="09123456789"
                     className="text-left"
                 />
-                {isPendingOtp ? <Loader /> : <button type="submit" className="btn btn--primary">ارسال کد تایید</button>}
+                {isPendingOtp ? <Loader /> : <button type="submit" className="btn btn--primary w-full">ارسال کد تایید</button>}
             </form>
         </div>
     )
