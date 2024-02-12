@@ -44,6 +44,22 @@
     .radio-button{
         @apply cursor-pointer form-radio text-primary focus:ring-primary
     }
+    
+    .badge{
+        @apply rounded-xl px-3
+    }
+
+    .badge--success{
+        @apply text-white bg-success
+    }
+
+    .badge--error {
+        @apply text-white bg-error
+    }
+
+    .badge--tag{
+        @apply ml-3 bg-secondary bg-opacity-25
+    }
 }
 
 html,
@@ -68,3 +84,8 @@ body {
 #root{
     height: 100vh;
 }
+
+table td,
+table th{
+    padding: .7rem;
+}   
